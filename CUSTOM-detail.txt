@@ -1,0 +1,30 @@
+(a) Source of data
+    URL: https://www.kaggle.com/rtatman/lego-database
+    Producer: Rachael Tatman
+
+(b) Description
+    The tables I defined are the Categories, Parts, Colors, and Inventory of Lego parts.
+    The Categories table contained a category ID as well as a category number, with the 
+    category ID being the primary key.
+    The Parts table contained part number, part name, and category ID. The part number
+    was designated to be the primary key and the category ID was made a foreign key 
+    referencing the Categories table.
+    The Colors table contained color ID, color name, color RGB value, and boolean opaque
+    value. The primary key was the color ID.
+    The Inventory table contained the inventory ID, the part number, the color ID, and the 
+    quantity. The primary key was a composite key of the inventory ID and the part number.
+    I defined 2 foreign keys: part number references the Parts table and color ID references
+    the Colors table.
+
+(c) Mapping Challenges
+    It was a very large dataset so in order to ensure there were no foreign key errors while 
+    also keeping the number of insert statements small, I had to select specific rows from 
+    the parts and the inventory datasets that matched.
+
+(d) Information Requests / Queries
+    Q: What color is there the most of in inventory from my small splice of data?
+    A: Orange
+    Q: In inventory 1117, how many of part number '49668' are left?
+    A: 2
+    Q: What category is part number '49668' a member of?
+    A: 'Plates Special'
